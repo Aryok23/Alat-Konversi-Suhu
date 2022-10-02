@@ -1,0 +1,56 @@
+// Alat Konversi Suhu
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x;
+    cout << "------------- Alat Hitung Koneversi Suhu -------------\n";
+    cout << "Masukkan kode satuan suhu yang akan dikonversi!\n(celcius = 1, kelvin = 2, reamur = 3, fahrenheit = 4)\n";
+    cout << "Kode satuan suhu : ";
+    cin >> x;
+    if (x==1)
+    { double s, k, r, f;
+        cout << "Masukkan nilai suhu dalam celcius (gunakan titik untuk tanda desimal): ";
+        cin >> s;
+        k=s+273.15;
+        r=s*4/5;
+        f=s*9/5+32;
+        cout << "Nilai suhu dalam kelvin : " << k;
+        cout << "\nNilai suhu dalam reamur : " << r;
+        cout << "\nNilai suhu dalam fahrenheit : " << f;
+    } else if (x==2)
+    { double s, c, r, f;
+        cout << "Masukkan nilai suhu dalam kelvin (gunakan titik untuk tanda desimal): ";
+        cin >> s;
+        c=s-273.15;
+        r=(s-273.15)*4/5;
+        f=(s-273.15)*9/5+32;
+        cout << "Nilai suhu dalam celcius : " << c;
+        cout << "\nNilai suhu dalam reamur : " << r;
+        cout << "\nNilai suhu dalam fahrenheit : " << f;
+    } else if (x==3)
+    { double s, c, k, f;
+        cout << "Masukkan nilai suhu dalam reamur (gunakan titik untuk tanda desimal): ";
+        cin >> s;
+        c=s*5/4;
+        k=s*5/4+273.15;
+        f=s*9/4+32;
+        cout << "Nilai suhu dalam celcius : " << c;
+        cout << "\nNilai suhu dalam kelvin : " << k;
+        cout << "\nNilai suhu dalam fahrenheit : " << f;
+    } else if (x==4)
+    { double s, c, k, r;
+        cout << "Masukkan nilai suhu dalam fahrenheit (gunakan titik untuk tanda desimal): ";
+        cin >> s;
+        c=(s-32)*5/9;
+        k=(s-32)*5/9+273.15;
+        r=(s-32)*4/9;
+        cout << "Nilai suhu dalam celcius : " << c;
+        cout << "\nNilai suhu dalam kelvin : " << k;
+        cout << "\nNilai suhu dalam reamur : " << r;
+    } else
+    {   cout << "Masukkan kode yang sesuai!";
+    }
+
+    return 0;
+}
